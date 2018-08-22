@@ -1,0 +1,111 @@
+.header {
+  background-color: $primary-color;
+  position: relative;
+  width: 100%;
+  z-index: 9999;
+
+  @media screen and (max-width: $mobile-width) {
+    left: 0;
+    right: 0;
+    position: fixed;
+    top: 0;
+    z-index: 124;
+  }
+
+  .container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media screen and (max-width: $mobile-width) {
+      width: 93%;
+      padding: 22px 0;
+    }
+  }
+
+  // logos
+  &-logo {
+    display: block;
+    height: 26px;
+  }
+
+  // header links
+  .links-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: $header-links-container-height;
+    margin-left: auto;
+
+    @media screen and (max-width: $mobile-width) {
+      display: none;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      justify-content: flex-end;
+      width: auto;
+    }
+  }
+
+  .links-container-mobile {
+    display: none;
+
+    @media screen and (max-width: $mobile-width) {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-evenly;
+    }
+  }
+
+  .link {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-left: 34px;
+    opacity: 0.8;
+    text-decoration: none;
+    transition: opacity linear 0.1s;
+
+    &:hover,
+    &.active {
+      opacity: 1;
+    }
+
+    @media screen and (max-width: $mobile-width) {
+      margin-left: 0;
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+    @media screen and (max-width: $mobile-width) {
+      display: block;
+      order: 3;
+    }
+  }
+
+  .header-mobile-menu-container {
+    @media screen and (max-width: $mobile-width) {
+      background-color: $primary-color-darker;
+      height: $header-mobile-menu-container-height;
+    }
+  }
+
+  .Select {
+    $select-mobile-width: 125px;
+
+    margin-left: 25px;
+    @media screen and (max-width: $mobile-width) {
+      margin-left: 0;
+      max-width: $select-mobile-width;
+      order: 2;
+      .Select-control {
+        max-width: $select-mobile-width;
+      }
+    }
+  }
+}

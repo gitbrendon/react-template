@@ -1,0 +1,19 @@
+.footer {
+  @extend %full-width;
+
+  background-color: $primary-color;
+  bottom: 0;
+  padding: 18px 0;
+  position: absolute;
+
+  .container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media screen and (max-width: $tablet-width) {
+      flex-direction: column;
+    }
+  }
+}
