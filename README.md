@@ -26,3 +26,7 @@ To fix, I ran `export PATH=/usr/bin:$PATH` (so it would pick up libtool from xco
 - package.json
 - public/manifest.json
 - public/index.html
+
+# Acknowledgements
+
+This template is based on code taken from the [POA Network Governance Dapp](https://github.com/poanetwork/poa-dapps-voting).
